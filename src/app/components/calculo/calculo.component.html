@@ -1,0 +1,21 @@
+
+
+  <form [formGroup]="edades" (ngSubmit)="calcular()">
+
+    <label>
+        Edad Uno:
+        <input type="number" formControlName="edadUno" required>
+      </label>
+      
+      <label>
+        Edad Dos:
+        <input type="number" formControlName="edadDos" required>
+      </label>
+
+      <button type="submit" [disabled]="!edades.valid">Calcular</button>
+  
+  </form>
+
+  <br>
+  Suma: {{suma}} <br>
+  Promedio: {{promedio}}
