@@ -1,4 +1,7 @@
 export class Usuario {
-    nombre: string;
-    clave: string;
+
+    constructor(
+        public nombre: string,
+        public clave: string
+    ){}
 }

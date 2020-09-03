@@ -1,0 +1,11 @@
+.container{
+    padding: 10px;
+}
+
+.login-card {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 100px;
+}

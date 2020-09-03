@@ -9,6 +9,9 @@ import { CalculoComponent } from './components/calculo/calculo.component';
 import { LoginComponent } from './components/login/login.component';
 import { BienvenidoComponent } from './components/bienvenido/bienvenido.component';
 import { ErrorComponent } from './components/error/error.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './app-material.module';
+import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,16 @@ import { ErrorComponent } from './components/error/error.component';
     CalculoComponent,
     LoginComponent,
     BienvenidoComponent,
-    ErrorComponent
+    ErrorComponent,
+    ToolBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

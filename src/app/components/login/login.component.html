@@ -1,1 +1,38 @@
-<p>login works!</p>
+
+<div class="container">
+
+
+    <div class="login-card">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput type="text" formControlName="nombre" required>
+                </mat-form-field>
+            </div>
+    
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Clave</mat-label>
+                    <input matInput type="password" formControlName="clave" required>
+                </mat-form-field>
+            </div>
+    
+      
+            <div>
+                <button 
+                type="submit"
+                    mat-raised-button 
+                    color="primary">
+                    Ingresar
+                </button>
+            </div>
+            <br>
+            <div>{{usuario | json}}</div>
+        </form>
+    </div>
+
+  
+</div>
+  
