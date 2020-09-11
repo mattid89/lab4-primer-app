@@ -1,5 +1,8 @@
 <div class="margin">
     <mat-card>
+        <mat-card-header>
+            <mat-card-title>Países</mat-card-title>
+          </mat-card-header>
         <mat-list role="list">
             <mat-list-item *ngFor="let pais of paises" role="listitem">
                 {{pais.name}} - {{pais.region}} <img [src]="pais.flag" width="30px">
