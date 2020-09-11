@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CalculoComponent } from './components/calculo/calculo.component';
@@ -12,6 +13,8 @@ import { ErrorComponent } from './components/error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './app-material.module';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
+import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
+import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
     LoginComponent,
     BienvenidoComponent,
     ErrorComponent,
-    ToolBarComponent
+    ToolBarComponent,
+    ControlEntidadComponent,
+    ListadoEntidadComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
