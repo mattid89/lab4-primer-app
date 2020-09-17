@@ -1,6 +1,7 @@
 <div class="container box">
 
-    <app-listado-entidad (seleccion)="mostrarDetalle($event)" [paises]="paises" ></app-listado-entidad>
+    <app-listado-entidad [siNoBorra]="true" (eliminacion)="eliminar($event)" (seleccion)="mostrarDetalle($event)" [paises]="paises" [titulo]="'Países'"></app-listado-entidad>
     <app-detalle-entidad [pais]="pais" ></app-detalle-entidad>
+    <app-listado-entidad [siNoBorra]="false" [paises]="paisesBorrados" [titulo]="'Países Borrados'"></app-listado-entidad>
     
 </div>

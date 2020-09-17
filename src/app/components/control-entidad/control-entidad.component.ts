@@ -12,6 +12,7 @@ export class ControlEntidadComponent implements OnInit {
   constructor(private paisesService: PaisesService) { }
 
   paises: Pais[];
+  paisesBorrados: Pais[] = [];
   pais: Pais;
 
   ngOnInit() {
@@ -28,6 +29,14 @@ export class ControlEntidadComponent implements OnInit {
 
   mostrarDetalle(pais: Pais) {
     this.pais = pais;
+  }
+
+  eliminar(pais: Pais) {
+    console.log(pais);
+    let pos = this.paises.indexOf(pais);
+    console.log(pos)
+    let elementoEliminado = this.paises.splice(pos, 1)
+    this.paisesBorrados.push(elementoEliminado[0]);
   }
 
 }

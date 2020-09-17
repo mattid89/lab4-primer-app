@@ -1,11 +1,14 @@
 <div class="margin">
     <mat-card>
         <mat-card-header>
-            <mat-card-title>Países</mat-card-title>
+            <mat-card-title>{{titulo}}</mat-card-title>
           </mat-card-header>
         <mat-list role="list">
-            <mat-list-item *ngFor="let pais of paises" role="listitem" (click)="seleccionar(pais)">
-                {{pais.name}} - {{pais.region}} <img [src]="pais.flag" width="30px">
+            <mat-list-item *ngFor="let pais of paises" role="listitem" >
+                <span class="pointer" (click)="seleccionar(pais)">
+                    {{pais.name}} - {{pais.region}} <img [src]="pais.flag" width="30px">
+                </span>
+                <app-boton-entidad *ngIf="siNoBorra" (borro)="eliminar($event)" [pais]="pais"></app-boton-entidad>
             </mat-list-item>
         </mat-list>
           
