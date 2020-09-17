@@ -15,6 +15,7 @@ import { MaterialModule } from './app-material.module';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import { ControlEntidadComponent } from './components/control-entidad/control-entidad.component';
 import { ListadoEntidadComponent } from './components/listado-entidad/listado-entidad.component';
+import { DetalleEntidadComponent } from './components/detalle-entidad/detalle-entidad.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ListadoEntidadComponent } from './components/listado-entidad/listado-en
     ErrorComponent,
     ToolBarComponent,
     ControlEntidadComponent,
-    ListadoEntidadComponent
+    ListadoEntidadComponent,
+    DetalleEntidadComponent
   ],
   imports: [
     BrowserModule,

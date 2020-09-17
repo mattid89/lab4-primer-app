@@ -1,5 +1,6 @@
 <div class="container box">
 
-    <app-listado-entidad [paises]="paises" ></app-listado-entidad>
+    <app-listado-entidad (seleccion)="mostrarDetalle($event)" [paises]="paises" ></app-listado-entidad>
+    <app-detalle-entidad [pais]="pais" ></app-detalle-entidad>
     
 </div>

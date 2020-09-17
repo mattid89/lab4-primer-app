@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Pais } from 'src/app/models/pais.model';
 
 @Component({
@@ -9,10 +9,15 @@ import { Pais } from 'src/app/models/pais.model';
 export class ListadoEntidadComponent implements OnInit {
 
   @Input() paises: Pais[];
+  @Output() seleccion = new EventEmitter<Pais>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  seleccionar(pais: Pais) {
+    this.seleccion.emit(pais);
   }
 
 }

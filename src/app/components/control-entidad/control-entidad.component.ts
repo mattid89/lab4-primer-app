@@ -12,6 +12,7 @@ export class ControlEntidadComponent implements OnInit {
   constructor(private paisesService: PaisesService) { }
 
   paises: Pais[];
+  pais: Pais;
 
   ngOnInit() {
     this.paisesService.getPaises()
@@ -23,6 +24,10 @@ export class ControlEntidadComponent implements OnInit {
         console.log(error)
       }
     );
+  }
+
+  mostrarDetalle(pais: Pais) {
+    this.pais = pais;
   }
 
 }

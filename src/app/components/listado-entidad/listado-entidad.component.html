@@ -4,7 +4,7 @@
             <mat-card-title>Países</mat-card-title>
           </mat-card-header>
         <mat-list role="list">
-            <mat-list-item *ngFor="let pais of paises" role="listitem">
+            <mat-list-item *ngFor="let pais of paises" role="listitem" (click)="seleccionar(pais)">
                 {{pais.name}} - {{pais.region}} <img [src]="pais.flag" width="30px">
             </mat-list-item>
         </mat-list>

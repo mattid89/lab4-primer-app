@@ -1,0 +1,8 @@
+<div class="margin" *ngIf="pais">
+    <mat-card>
+        <p>Nombre: {{pais.name}}</p>
+        <p>Región: {{pais.region}}</p>
+        <img [src]="pais.flag" width="50px">
+        <p>Área: {{pais.area}}</p>
+    </mat-card>
+</div>
