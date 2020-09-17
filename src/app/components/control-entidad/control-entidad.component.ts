@@ -32,9 +32,7 @@ export class ControlEntidadComponent implements OnInit {
   }
 
   eliminar(pais: Pais) {
-    console.log(pais);
     let pos = this.paises.indexOf(pais);
-    console.log(pos)
     let elementoEliminado = this.paises.splice(pos, 1)
     this.paisesBorrados.push(elementoEliminado[0]);
   }
